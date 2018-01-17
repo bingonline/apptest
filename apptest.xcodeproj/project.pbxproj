@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		370B242C200F870300EBF776 /* Mymodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370B242B200F870300EBF776 /* Mymodel.swift */; };
+		370B242E200F87C200EBF776 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370B242D200F87C200EBF776 /* Card.swift */; };
 		373DF543200E4099001658BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373DF542200E4099001658BB /* AppDelegate.swift */; };
 		373DF545200E4099001658BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373DF544200E4099001658BB /* ViewController.swift */; };
 		373DF548200E4099001658BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 373DF546200E4099001658BB /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		370B242B200F870300EBF776 /* Mymodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mymodel.swift; sourceTree = "<group>"; };
+		370B242D200F87C200EBF776 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		373DF53F200E4099001658BB /* apptest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = apptest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		373DF542200E4099001658BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		373DF544200E4099001658BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,11 +61,21 @@
 				373DF542200E4099001658BB /* AppDelegate.swift */,
 				373DF544200E4099001658BB /* ViewController.swift */,
 				373DF546200E4099001658BB /* Main.storyboard */,
-				373DF549200E4099001658BB /* Assets.xcassets */,
-				373DF54B200E4099001658BB /* LaunchScreen.storyboard */,
+				373DF554200E41B1001658BB /* supportFiles */,
 				373DF54E200E4099001658BB /* Info.plist */,
+				370B242B200F870300EBF776 /* Mymodel.swift */,
+				370B242D200F87C200EBF776 /* Card.swift */,
 			);
 			path = apptest;
+			sourceTree = "<group>";
+		};
+		373DF554200E41B1001658BB /* supportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				373DF549200E4099001658BB /* Assets.xcassets */,
+				373DF54B200E4099001658BB /* LaunchScreen.storyboard */,
+			);
+			path = supportFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +150,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				370B242C200F870300EBF776 /* Mymodel.swift in Sources */,
 				373DF545200E4099001658BB /* ViewController.swift in Sources */,
 				373DF543200E4099001658BB /* AppDelegate.swift in Sources */,
+				370B242E200F87C200EBF776 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
