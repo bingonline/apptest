@@ -10,11 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var game:Mymodel=Mymodel()
+    lazy var game=Mymodel(numberOfPairsOfCards:(buttonArray.count+1)/2)
     
     var flipCount:Int=0{
         didSet{
-            flipcountLabel.text="flips: \(flipCount)"        }
+            flipcountLabel.text="flips: \(flipCount)"}
     }
     
     var emojchoices:Array<String>=["a","bdd","EFF"]
@@ -30,10 +30,41 @@ class ViewController: UIViewController {
         flipCard(withEmoji:"😃", on: sender)
         if let cardNumber = buttonArray.index(of:sender)
         {
+            game.chooseCard(at: cardNumber)
+            updateViewFromModel()
             print("carnum=\(cardNumber)")
         }
         
     }
+    func updateViewFromModel()
+    {
+        for index in buttonArray.indices
+        {
+            let button=buttonArray[index]
+            let card=game.cards[index]
+            if card.isFaceUp
+            {
+                button.setTitle(emoji(for:card), for: UIControlState
+                .normal)
+                button.backgroundColor=#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            }
+        }
+    }
+    
+    var emojiChoices=["a","b","c"]
+    var emoji=[Int:String]()
+    func emoji(for card:Card)->String
+    {
+        if emoji[card.identifier]==nil{
+            print("ok")
+        }else
+        {
+            return "?"
+        }
+      return "?"
+    }
+    
+    
     func flipCard(withEmoji emoji:String,on button:UIButton)
     {
         if button.currentTitle == emoji{

@@ -14,13 +14,19 @@ class Mymodel
     
     func chooseCard(at index:Int)
     {
-        
+        if cards[index].isFaceUp
+        {
+            cards[index].isFaceUp=false
+        }else
+        {
+            cards[index].isFaceUp=true
+        }
         
         
     }
     init(numberOfPairsOfCards:Int)
     {
-        for identifier in 0..<numberOfPairsOfCards
+        for _ in 0..<numberOfPairsOfCards
         {
             let card=Card()
             cards+=[card,card]
